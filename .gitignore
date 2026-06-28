@@ -68,3 +68,6 @@ google-service-account.json
 *.apk
 *.aab
 *.ipa
+# Exclude all .md files
+*.md
+!README.md
