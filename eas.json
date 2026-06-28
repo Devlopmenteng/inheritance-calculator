@@ -7,12 +7,7 @@
     "preview": {
       "distribution": "internal",
       "android": {
-        "buildType": "apk",
-        "gradle": {
-          "java": {
-            "version": "17"
-          }
-        }
+        "buildType": "apk"
       },
       "env": {
         "APP_ENV": "preview"
@@ -20,12 +15,7 @@
     },
     "production": {
       "android": {
-        "buildType": "apk",
-        "gradle": {
-          "java": {
-            "version": "17"
-          }
-        }
+        "buildType": "apk"
       },
       "env": {
         "APP_ENV": "production"
