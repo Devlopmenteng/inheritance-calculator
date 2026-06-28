@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "حاسبة المواريث الإسلامية - برو",
-    "slug": "inheritance-calculator-pro",
+    "slug": "merathmobile",
     "version": "5.1.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -14,17 +14,8 @@
     },
     "assetBundlePatterns": ["**/*"],
     "description": "Professional Islamic Inheritance Calculator supporting all 4 Sunni Madhabs with advanced features",
-    "githubUrl": "https://github.com/inheritance-calculator/pro",
+    "githubUrl": "https://github.com/inheritance-calculator",
     "primaryColor": "#1B5E20",
-    "ios": {
-      "supportsTablet": true,
-      "bundleIdentifier": "com.inheritance.calculator.pro",
-      "buildNumber": "5.1.0",
-      "infoPlist": {
-        "CFBundleDisplayName": "حاسبة المواريث",
-        "CFBundleName": "Inheritance Calculator"
-      }
-    },
     "android": {
       "package": "com.inheritance.calculator.pro",
       "versionCode": 510,
@@ -59,13 +50,13 @@
     },
     "extra": {
       "eas": {
-        "projectId": "inheritance-calculator-pro-2024"
+        "projectId": "6e303c44-d7c9-403a-a835-80eff6a802ff"
       }
     },
-    "owner": "inheritance-calculator-pro",
+    "owner": "merath_mobile",
     "updates": {
       "fallbackToCacheTimeout": 0,
-      "url": "https://u.expo.dev/inheritance-calculator-pro-2024"
+      "url": "https://u.expo.dev/6e303c44-d7c9-403a-a835-80eff6a802ff"
     },
     "runtimeVersion": {
       "policy": "sdkVersion"
