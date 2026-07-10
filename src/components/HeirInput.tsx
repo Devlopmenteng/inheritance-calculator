@@ -53,7 +53,7 @@ export const HeirInput: React.FC<HeirInputProps> = ({
   };
 
   return (
-    <Animated.View style={[animatedStyle, { flexBasis: '48%', margin: 6 }]}> 
+    <Animated.View style={[animatedStyle, { flexBasis: '48%', margin: 6 }]}>
       <Surface
         style={[
           styles.container,
