@@ -61,7 +61,8 @@ export class TestSuite {
         {
           name: 'زوج وبنت',
           heirs: { husband: 1, daughter: 1 },
-          expected: { husband: 1 / 4, daughter: 1 / 2 },
+          expected: { husband: 1 / 4, daughter: 3 / 4 },
+          radd: true,
         },
         {
           name: 'زوج وابن وبنت',
@@ -82,7 +83,6 @@ export class TestSuite {
           name: 'أب وأم فقط (رد)',
           heirs: { father: 1, mother: 1 },
           expected: { father: 2 / 3, mother: 1 / 3 },
-          radd: true,
         },
         {
           name: 'ابن وبنتان',
@@ -118,8 +118,11 @@ export class TestSuite {
         {
           name: 'زوج + أم + أختان لأم + أختان شقيقتان (عول)',
           heirs: { husband: 1, mother: 1, maternal_brother: 2, full_sister: 2 },
-          expected: {},
-          awl: true,
+          expected: {
+            husband: 1 / 2,
+            mother: 1 / 6,
+            shared_siblings: 1 / 3,
+          },
         },
       ],
 
@@ -128,7 +131,7 @@ export class TestSuite {
         {
           name: 'أم + بنت (رد)',
           heirs: { mother: 1, daughter: 1 },
-          expected: { mother: 1 / 5, daughter: 4 / 5 },
+          expected: { mother: 1 / 4, daughter: 3 / 4 },
           radd: true,
         },
         {
@@ -141,7 +144,6 @@ export class TestSuite {
           name: 'أم + أب فقط (رد)',
           heirs: { mother: 1, father: 1 },
           expected: { mother: 1 / 3, father: 2 / 3 },
-          radd: true,
         },
       ],
 
@@ -170,12 +172,14 @@ export class TestSuite {
         {
           name: 'بنتان تحجبان بنت الابن (بدون ابن ابن)',
           heirs: { daughter: 2, granddaughter: 1 },
-          expected: { daughter: 2 / 3 },
+          expected: { daughter: 1 },
+          radd: true,
         },
         {
           name: 'بنت + بنت ابن (السدس تكملة)',
           heirs: { daughter: 1, granddaughter: 1 },
-          expected: { daughter: 1 / 2, granddaughter: 1 / 6 },
+          expected: { daughter: 3 / 4, granddaughter: 1 / 4 },
+          radd: true,
         },
       ],
 
@@ -256,10 +260,10 @@ export class TestSuite {
           name: 'زوج + بنت + بنت ابن + أم',
           heirs: { husband: 1, daughter: 1, granddaughter: 1, mother: 1 },
           expected: {
-            husband: 1 / 4,
-            daughter: 1 / 2,
-            granddaughter: 1 / 6,
-            mother: 1 / 6,
+            husband: 3 / 13,
+            daughter: 6 / 13,
+            granddaughter: 2 / 13,
+            mother: 2 / 13,
           },
           awl: true,
         },

@@ -378,6 +378,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: theme.colors.background.main,
+    writingDirection: 'rtl',
   },
   header: {
     paddingTop: 50,
@@ -405,9 +406,9 @@ const styles = StyleSheet.create({
     borderRadius: 20,
   },
   madhabGrid: {
-    flexDirection: 'row',
+    flexDirection: 'row-reverse',
     flexWrap: 'wrap',
-    gap: 10,
+    marginHorizontal: -6,
   },
   madhabCard: {
     flex: 1,
@@ -436,9 +437,8 @@ const styles = StyleSheet.create({
     borderLeftWidth: 4,
   },
   specialCaseHeader: {
-    flexDirection: 'row',
+    flexDirection: 'row-reverse',
     alignItems: 'center',
-    gap: 10,
     marginBottom: 8,
   },
   specialCaseTitle: {

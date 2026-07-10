@@ -742,6 +742,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: theme.colors.background.main,
+    writingDirection: 'rtl',
   },
   scrollView: {
     flex: 1,
@@ -771,12 +772,15 @@ const styles = StyleSheet.create({
     fontSize: 14,
   },
   statsContainer: {
-    flexDirection: 'row',
+    flexDirection: 'row-reverse',
+    flexWrap: 'wrap',
     padding: 16,
-    gap: 12,
+    marginHorizontal: -6,
   },
   statCard: {
     flex: 1,
+    minWidth: '45%',
+    marginHorizontal: 6,
     padding: 16,
     borderRadius: 16,
     alignItems: 'center',
@@ -802,11 +806,11 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
     justifyContent: 'space-between',
     marginBottom: 12,
-    gap: 8,
+    marginHorizontal: -4,
   },
   madhabCard: {
-    flex: 1,
-    minWidth: '45%',
+    flexBasis: '48%',
+    marginHorizontal: 4,
     borderRadius: 12,
     overflow: 'hidden',
   },
@@ -839,19 +843,21 @@ const styles = StyleSheet.create({
     borderRadius: 12,
   },
   rowInputs: {
-    flexDirection: 'row',
-    gap: 12,
+    flexDirection: 'row-reverse',
+    justifyContent: 'space-between',
+    marginHorizontal: -6,
   },
   flex1: {
     flex: 1,
+    marginHorizontal: 6,
   },
   notice: {
     padding: 14,
     backgroundColor: '#FFF8E1',
     borderRadius: 12,
     marginTop: 12,
-    borderLeftWidth: 4,
-    borderLeftColor: theme.colors.secondary.main,
+    borderStartWidth: 4,
+    borderStartColor: theme.colors.secondary.main,
   },
   noticeText: {
     fontSize: 12,
@@ -871,9 +877,9 @@ const styles = StyleSheet.create({
     paddingVertical: 8,
   },
   heirsGrid: {
-    flexDirection: 'row',
+    flexDirection: 'row-reverse',
     flexWrap: 'wrap',
-    gap: 10,
+    marginHorizontal: -5,
     paddingVertical: 8,
   },
   divider: {
@@ -882,7 +888,6 @@ const styles = StyleSheet.create({
   },
   actionButtons: {
     padding: 16,
-    gap: 12,
   },
   button: {
     borderRadius: 16,
@@ -897,8 +902,8 @@ const styles = StyleSheet.create({
     elevation: 4,
   },
   secondaryButtons: {
-    flexDirection: 'row',
-    gap: 12,
+    flexDirection: 'row-reverse',
+    justifyContent: 'space-between',
   },
   secondaryButton: {
     flex: 1,

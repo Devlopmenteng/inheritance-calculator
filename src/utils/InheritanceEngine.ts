@@ -173,6 +173,10 @@ export class InheritanceEngine {
   normalizeHeirs(heirs: Heirs): Heirs {
     const normalized: Heirs = {};
 
+    Object.keys(FIQH_DATABASE.heirNames).forEach((key) => {
+      normalized[key] = 0;
+    });
+
     for (const [key, value] of Object.entries(heirs)) {
       let val = Math.max(0, Math.floor(parseInt(String(value)) || 0));
 
@@ -426,7 +430,11 @@ export class InheritanceEngine {
     }
 
     // 7. Grandfather blocks siblings in Shafii and Hanafi
-    if (h.grandfather > 0 && rules.grandfatherWithSiblings === 'blocks') {
+    if (
+      h.grandfather > 0 &&
+      rules.grandfatherWithSiblings === 'blocks' &&
+      !this.isAkdariyya()
+    ) {
       const siblingsToBlock = [
         'full_brother',
         'full_sister',

@@ -53,7 +53,7 @@ export const HeirInput: React.FC<HeirInputProps> = ({
   };
 
   return (
-    <Animated.View style={[animatedStyle, { flex: 1, minWidth: '45%' }]}>
+    <Animated.View style={[animatedStyle, { flexBasis: '48%', margin: 6 }]}> 
       <Surface
         style={[
           styles.container,
@@ -140,6 +140,7 @@ const styles = StyleSheet.create({
   },
   content: {
     padding: 12,
+    writingDirection: 'rtl',
   },
   info: {
     marginBottom: 10,
@@ -149,17 +150,18 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: '#1a1a1a',
     marginBottom: 2,
+    textAlign: 'right',
   },
   description: {
     fontSize: 10,
     color: '#757575',
     lineHeight: 14,
+    textAlign: 'right',
   },
   controls: {
-    flexDirection: 'row',
+    flexDirection: 'row-reverse',
     alignItems: 'center',
-    justifyContent: 'center',
-    gap: 8,
+    justifyContent: 'space-between',
   },
   button: {
     width: 36,

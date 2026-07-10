@@ -542,6 +542,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: theme.colors.background.main,
+    writingDirection: 'rtl',
   },
   scrollView: {
     flex: 1,
@@ -554,7 +555,7 @@ const styles = StyleSheet.create({
     borderBottomRightRadius: 30,
   },
   headerRow: {
-    flexDirection: 'row',
+    flexDirection: 'row-reverse',
     alignItems: 'center',
     justifyContent: 'space-between',
   },
@@ -566,14 +567,16 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   badgesRow: {
-    flexDirection: 'row',
+    flexDirection: 'row-reverse',
     flexWrap: 'wrap',
-    gap: 8,
     marginTop: 16,
     paddingHorizontal: 8,
+    marginHorizontal: -4,
   },
   badge: {
     borderRadius: 20,
+    marginHorizontal: 4,
+    marginBottom: 8,
   },
   content: {
     padding: 16,
@@ -583,13 +586,14 @@ const styles = StyleSheet.create({
     borderRadius: 20,
   },
   summaryGrid: {
-    flexDirection: 'row',
+    flexDirection: 'row-reverse',
     flexWrap: 'wrap',
-    gap: 10,
+    marginHorizontal: -6,
   },
   summaryItem: {
     flex: 1,
     minWidth: '45%',
+    marginHorizontal: 6,
     padding: 14,
     borderRadius: 14,
     backgroundColor: '#f8f8f8',
@@ -636,28 +640,30 @@ const styles = StyleSheet.create({
     marginVertical: 3,
   },
   blockedChips: {
-    flexDirection: 'row',
+    flexDirection: 'row-reverse',
     flexWrap: 'wrap',
-    gap: 8,
+    marginHorizontal: -6,
   },
   blockedChip: {
     backgroundColor: '#FFEBEE',
     borderRadius: 16,
+    marginHorizontal: 6,
+    marginBottom: 8,
   },
   blockedChipText: {
     color: '#C62828',
     fontSize: 12,
   },
   legend: {
-    flexDirection: 'row',
+    flexDirection: 'row-reverse',
     flexWrap: 'wrap',
-    gap: 12,
     marginTop: 16,
+    marginHorizontal: -6,
   },
   legendItem: {
-    flexDirection: 'row',
+    flexDirection: 'row-reverse',
     alignItems: 'center',
-    gap: 6,
+    marginHorizontal: 6,
   },
   legendColor: {
     width: 14,
@@ -667,30 +673,35 @@ const styles = StyleSheet.create({
   legendText: {
     fontSize: 12,
     color: theme.colors.text.secondary,
+    textAlign: 'right',
   },
   heirName: {
     fontWeight: '600',
     fontSize: 14,
+    textAlign: 'right',
   },
   heirType: {
     fontSize: 11,
     color: theme.colors.text.secondary,
+    textAlign: 'right',
   },
   fraction: {
     fontWeight: '600',
     color: theme.colors.primary.main,
+    textAlign: 'right',
   },
   amount: {
     fontWeight: 'bold',
     color: '#1B5E20',
+    textAlign: 'right',
   },
   perPerson: {
     fontSize: 10,
     color: theme.colors.text.secondary,
+    textAlign: 'right',
   },
   step: {
-    flexDirection: 'row',
-    gap: 12,
+    flexDirection: 'row-reverse',
     marginVertical: 10,
     alignItems: 'flex-start',
   },

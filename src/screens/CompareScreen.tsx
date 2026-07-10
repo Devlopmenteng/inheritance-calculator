@@ -312,6 +312,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: theme.colors.background.main,
+    writingDirection: 'rtl',
   },
   header: {
     paddingTop: 50,
@@ -385,13 +386,13 @@ const styles = StyleSheet.create({
     color: theme.colors.border.medium,
   },
   summaryContainer: {
-    flexDirection: 'row',
+    flexDirection: 'row-reverse',
     flexWrap: 'wrap',
-    gap: 10,
     marginTop: 20,
     paddingTop: 20,
     borderTopWidth: 1,
     borderTopColor: theme.colors.border.light,
+    marginHorizontal: -6,
   },
   summaryItem: {
     flex: 1,
@@ -407,10 +408,10 @@ const styles = StyleSheet.create({
     fontSize: 14,
   },
   chipsRow: {
-    flexDirection: 'row',
+    flexDirection: 'row-reverse',
     flexWrap: 'wrap',
-    gap: 6,
     justifyContent: 'center',
+    marginHorizontal: -4,
   },
   summaryChip: {
     borderRadius: 12,

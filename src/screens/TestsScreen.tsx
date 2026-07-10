@@ -314,6 +314,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: theme.colors.background.main,
+    writingDirection: 'rtl',
   },
   header: {
     paddingTop: 50,
@@ -341,8 +342,7 @@ const styles = StyleSheet.create({
     borderRadius: 20,
   },
   controls: {
-    flexDirection: 'row',
-    gap: 12,
+    flexDirection: 'row-reverse',
     alignItems: 'center',
   },
   madhabButton: {
@@ -363,14 +363,15 @@ const styles = StyleSheet.create({
     color: theme.colors.text.secondary,
   },
   statsGrid: {
-    flexDirection: 'row',
+    flexDirection: 'row-reverse',
     flexWrap: 'wrap',
-    gap: 10,
     marginBottom: 20,
+    marginHorizontal: -6,
   },
   statItem: {
     flex: 1,
     minWidth: '22%',
+    marginHorizontal: 6,
     padding: 14,
     borderRadius: 14,
     alignItems: 'center',
@@ -414,7 +415,6 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   testsList: {
-    gap: 8,
     marginVertical: 10,
   },
   testItem: {
@@ -422,9 +422,9 @@ const styles = StyleSheet.create({
     borderRadius: 12,
   },
   testHeader: {
-    flexDirection: 'row',
+    flexDirection: 'row-reverse',
     alignItems: 'center',
-    gap: 10,
+    justifyContent: 'space-between',
   },
   testIcon: {
     fontSize: 18,
@@ -433,12 +433,14 @@ const styles = StyleSheet.create({
     flex: 1,
     fontWeight: '600',
     fontSize: 13,
+    textAlign: 'right',
+    flexShrink: 1,
   },
   testError: {
     color: '#C62828',
     fontSize: 11,
     marginTop: 6,
-    marginRight: 28,
+    textAlign: 'right',
   },
   divider: {
     marginVertical: 10,

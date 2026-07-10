@@ -235,9 +235,8 @@ const styles = StyleSheet.create({
     padding: 16,
   },
   logHeader: {
-    flexDirection: 'row',
+    flexDirection: 'row-reverse',
     alignItems: 'center',
-    gap: 12,
   },
   logInfo: {
     flex: 1,
