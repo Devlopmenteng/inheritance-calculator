@@ -64,7 +64,7 @@ export const FIQH_DATABASE = {
         grandfatherWithSiblings: 'blocks',
         raddToSpouse: true,
         bloodRelativesEnabled: true,
-        musharrakaEnabled: false,
+        musharrakaEnabled: true,
         akdariyyaEnabled: true,
       },
       characteristics: [
@@ -113,7 +113,7 @@ export const FIQH_DATABASE = {
         grandfatherWithSiblings: 'shares',
         raddToSpouse: true,
         bloodRelativesEnabled: true,
-        musharrakaEnabled: false,
+        musharrakaEnabled: true,
         akdariyyaEnabled: true,
       },
       characteristics: [
